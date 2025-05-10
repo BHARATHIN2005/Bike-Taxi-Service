@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f0f4f8;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+#app {
+  background: white;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  padding: 20px 30px;
+}
+h1, h2, h3 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 16px;
+}
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number] {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+button {
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  margin: 12px 0;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #004ba0;
+}
+.error {
+  color: crimson;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+#booking-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.95rem;
+  background: #f9fbfd;
+}
+.booking-item {
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+.booking-item:last-child {
+  border-bottom: none;
+}
+#logout-btn {
+  background: #d32f2f;
+  margin-bottom: 20px;
+}
+a {
+  color: #1976d2;
+  cursor: pointer;
+  text-decoration: underline;
+}
+a:hover {
+  color: #004ba0;
+}
+@media (max-width: 600px) {
+  #app {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+}

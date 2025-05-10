@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bike Taxi Application</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Bike Taxi Service</h1>
+
+    <section id="auth-section">
+      <h2 id="auth-title">Login</h2>
+      <div id="auth-error" class="error" hidden></div>
+      <form id="auth-form" autocomplete="off">
+        <input type="text" id="register-name" placeholder="Full Name" hidden />
+        <input type="email" id="auth-email" placeholder="Email" required />
+        <input type="password" id="auth-password" placeholder="Password" required />
+        <button type="submit" id="auth-button">Login</button>
+      </form>
+      <p id="auth-nav">Don't have an account? <a href="#" id="toggle-auth">Register here</a></p>
+    </section>
+
+    <section id="app-section" hidden>
+      <h2>Hello, <span id="user-name"></span>!</h2>
+      <button id="logout-btn">Logout</button>
+
+      <form id="booking-form" autocomplete="off">
+        <h3>Book a Ride</h3>
+        <input type="text" id="source" placeholder="Pickup Location" required />
+        <input type="text" id="destination" placeholder="Destination Location" required />
+        <input type="number" id="distance" placeholder="Distance (km)" step="0.1" min="0.1" required />
+        <button type="submit">Book Ride</button>
+        <div id="booking-error" class="error" hidden></div>
+      </form>
+
+      <h3>Your Bookings</h3>
+      <div id="booking-list"><em>No bookings yet.</em></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
